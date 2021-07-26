@@ -106,4 +106,14 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    // 全文搜索插件
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en", "zh"],
+      },
+    ],
+  ],
 };
