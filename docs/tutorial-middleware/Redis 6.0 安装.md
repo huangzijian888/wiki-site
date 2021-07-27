@@ -1,5 +1,6 @@
 ---
 id: Redis6.0安装
+sidebar_position: 1
 ---
 ##  第一步：下载安装包
 
@@ -70,3 +71,38 @@ cd bin && ./redis-server
 ./redis-server ./redis.conf
 ```
 
+## 第七步：配置开机启动
+
+ 在系统服务目录创建 redis.service 文件
+
+```shell
+vim /etc/systemd/system/redis.service
+```
+
+写入以下内容
+
+```shell
+[Unit]
+Description=redis-server
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+````
+
+重载系统服务
+
+```shell
+systemctl daemon-reload
+```
+
+将服务加入开机自启
+
+```shell
+systemctl enable redis.service
+```
