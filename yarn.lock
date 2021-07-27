@@ -1447,7 +1447,7 @@
     "@docusaurus/types" "2.0.0-beta.3"
     tslib "^2.1.0"
 
-"@docusaurus/theme-search-algolia@2.0.0-beta.3":
+"@docusaurus/theme-search-algolia@2.0.0-beta.3", "@docusaurus/theme-search-algolia@^2.0.0-beta.3":
   version "2.0.0-beta.3"
   resolved "https://registry.nlark.com/@docusaurus/theme-search-algolia/download/@docusaurus/theme-search-algolia-2.0.0-beta.3.tgz#9ca8142fe4686d262d546c9ba309d02d9d4d59a9"
   integrity sha1-nKgUL+RobSYtVGybownQLZ1NWak=
