@@ -1,8 +1,11 @@
 ---
-id: Redis6.0安装
+id: install-Redis6.0
 sidebar_position: 1
 ---
-##  第一步：下载安装包
+
+# Redis 6.0 安装
+
+## 第一步：下载安装包
 
 访问 [Redis 官网](https://redis.io/)，获取安装包，这里以安装 6.0.9 版本为例，其他版本类似。
 
@@ -10,7 +13,7 @@ sidebar_position: 1
 wget https://download.redis.io/releases/redis-6.0.9.tar.gz
 ```
 
-##  第二步：解压
+## 第二步：解压
 
 ```shell
 tar -zvxf redis-6.0.9.tar.gz
@@ -24,7 +27,6 @@ yum install -y gcc-c++ autoconf automake
 
 由于在 Centos 7 下安装的 gcc-c++ 默认为 4 版本，但是要编译 Redis 6 需要新版本的 gcc-c++ ，所以需要将 gcc-c++ 版本升级为 9 版本。
 如果已经是 9 版本，可以直接跳到第四步。
-
 
 ```shell
 # 安装 scl 源
@@ -73,7 +75,7 @@ cd bin && ./redis-server
 
 ## 第七步：配置开机启动
 
- 在系统服务目录创建 redis.service 文件
+在系统服务目录创建 redis.service 文件
 
 ```shell
 vim /etc/systemd/system/redis.service
@@ -93,7 +95,7 @@ PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target
-````
+```
 
 重载系统服务
 
