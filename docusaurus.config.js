@@ -5,7 +5,7 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Emory\'s Site',
+  title: "Emory's Wiki",
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -19,70 +19,18 @@ module.exports = {
       defaultMode: 'dark',
     },
     navbar: {
-      title: 'Emory\'s Site',
+      title: "Emory's Wiki",
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: 'Wiki',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
           href: 'https://github.com/huangzijian888/wiki-site',
           label: 'GitHub',
           position: 'right',
         },
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Emory Huang. Built with Docusaurus.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -101,13 +49,9 @@ module.exports = {
             'https://github.com/huangzijian888/wiki-site/edit/master',
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          routeBasePath: '/'
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/huangzijian888/wiki-site/edit/master',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
