@@ -1,5 +1,5 @@
 ---
-id: Swagger常用注解
+id: SwaggerAnnotations
 sidebar_position: 1
 ---
 
@@ -25,7 +25,7 @@ public class IndexController{
 
 | 注解属性 |   类型    |                  描述                   |
 | :------: | :-------: | :-------------------------------------: |
-|   tags   | String[ ] | 描述请求类的作用，非空时会覆盖value的值 |
+|   tags   | String[ ] | 描述请求类的作用，非空时会覆盖 value 的值 |
 |  value   |  String   |            描述请求类的作用             |
 
 ### 非常用属性
@@ -130,7 +130,7 @@ public class Student {
 
 ## 4. @ApiImplicitParams 和 @ApiImplicitParam
 
-@ApiImplicitParams 用在请求的方法上，表示一组参数说明，里面是 @ApiImplicitParam 列表。@ApiImplicitParam 属性和 @ApiParam 相同
+@ApiImplicitParams 用在请求的方法上，里面是 @ApiImplicitParam 列表。@ApiImplicitParam 属性和 @ApiParam 相同
 
 ### 代码示例
 
