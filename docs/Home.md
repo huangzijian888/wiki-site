@@ -19,6 +19,5 @@ Hi there~
 
 [![GitHub deployments](https://img.shields.io/github/deployments/huangzijian888/wiki-site/Production?label=Build&style=flat-square)](https://vercel.com/huangzijian888/wiki-site/deployments)
 [![GitHub last commit](https://img.shields.io/github/last-commit/huangzijian888/wiki-site?color=FCD734&label=Last%20commit&style=flat-square)](https://github.com/huangzijian888/wiki-site/commits/master)
-[![contact](https://img.shields.io/badge/Contact%20me-here-34ABE0?&style=flat-square)](ContactMe)
 
 <h6>Emory Huang |  <a href="https://beian.miit.gov.cn"> 桂 ICP 备 2020008995 号</a> | Built with Docusaurus</h6>
