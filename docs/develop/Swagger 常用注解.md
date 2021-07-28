@@ -246,7 +246,7 @@ public class Student {
 
 ## 部分注解与接口文档的关系
 
-![image-20210728161315219](http://blog-pic.codeyouth.top/20210728161315.png)
+![示意图](https://i.imgur.com/MBVZ1gg.png)
 
 
 
