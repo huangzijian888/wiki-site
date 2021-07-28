@@ -15,6 +15,9 @@ module.exports = {
   organizationName: 'huangzijian888', // Usually your GitHub org/user name.
   projectName: 'wiki-site', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+    },
     navbar: {
       title: 'Emory\'s Site',
       logo: {
