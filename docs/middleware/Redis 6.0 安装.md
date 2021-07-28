@@ -5,6 +5,8 @@ sidebar_position: 1
 
 # Redis 6.0 安装
 
+> 基于 Centos 7.8
+
 ## 第一步：下载安装包
 
 访问 [Redis 官网](https://redis.io/)，获取安装包，这里以安装 6.0.9 版本为例，其他版本类似。
@@ -61,15 +63,21 @@ mkdir -p /usr/local/redis && make PREFIX=/usr/local/redis/ install
 
 ## 第六步：启动
 
-安装完成后会在安装目录生成一个 bin 文件夹，里面是 Redis 相关的可执行文件，调用 redis-server 即可按默认配置启动 redis
+安装完成后会在安装目录 `/usr/local/redis/` 生成一个 bin 文件夹，里面是 Redis 相关的可执行文件，调用 redis-server 即可按默认配置启动 redis
 
 ```shell
-cd bin && ./redis-server
+cd /usr/local/redis/bin && ./redis-server
 ```
 
 如果想要指定配置文件启动，可以先将 redis 包下的配置文件拷贝至安装目录，按需求修改配置，启动的时候加上配置文件路径即可
 
 ```shell
+# 复制配置文件
+cp /usr/local/src/redis-6.0.9/redis.conf /usr/local/redis/bin
+
+# 省略配置文件修改部分，可以根据需要自行修改 /usr/local/redis/bin/redis.conf 内容
+
+# 指定配置文件启动
 ./redis-server ./redis.conf
 ```
 
