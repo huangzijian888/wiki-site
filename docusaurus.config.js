@@ -1,59 +1,58 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const math = require('remark-math');
-const katex = require('rehype-katex');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const math = require("remark-math");
+const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Emory's Wiki",
-  tagline: 'Dinosaurs are cool',
-  url: 'https://codeyouth.top',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'huangzijian888', // Usually your GitHub org/user name.
-  projectName: 'wiki-site', // Usually your repo name.
+  tagline: "Dinosaurs are cool",
+  url: "https://codeyouth.top",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "huangzijian888", // Usually your GitHub org/user name.
+  projectName: "wiki-site", // Usually your repo name.
   themeConfig: {
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: "dark",
     },
     navbar: {
       title: "Emory's Wiki",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: "My Site Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          href: 'https://github.com/huangzijian888/wiki-site',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/huangzijian888/wiki-site",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-      additionalLanguages: ['java'],
+      additionalLanguages: ["java"],
     },
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/huangzijian888/wiki-site/edit/master',
+          editUrl: "https://github.com/huangzijian888/wiki-site/edit/master",
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          routeBasePath: '/'
+          routeBasePath: "/",
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
@@ -67,12 +66,21 @@ module.exports = {
         language: ["en", "zh"],
       },
     ],
+    [
+      "@docusaurus/plugin-sitemap",
+      {
+        changefreq: "daily",
+        priority: 1.0,
+        trailingSlash: false,
+      },
+    ],
   ],
   stylesheets: [
     {
-        href: "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css",
-        integrity: "sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc",
-        crossorigin: "anonymous",
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css",
+      integrity:
+        "sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc",
+      crossorigin: "anonymous",
     },
-],
+  ],
 };
