@@ -7,7 +7,7 @@ const katex = require('rehype-katex');
 module.exports = {
   title: "Emory's Wiki",
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://codeyouth.top',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
