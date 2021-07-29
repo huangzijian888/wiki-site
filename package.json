@@ -1,6 +1,16 @@
 {
   "name": "wiki-site",
-  "version": "0.0.0",
+  "author": {
+    "name":"Emory Huang",
+    "email": "huangzijian888@gmail.com",
+    "url": "https://codeyouth.top"
+  },
+  "bugs": "https://github.com/huangzijian888/wiki-site/issues",
+  "homepage": "https://codeyouth.top",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": ["wiki","site","blog"],
+  "description": "个人知识库",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
