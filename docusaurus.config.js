@@ -54,6 +54,10 @@ module.exports = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        sitemap: {
+          changefreq: "daily",
+          priority: 1.0,
+        },
       },
     ],
   ],
@@ -64,14 +68,6 @@ module.exports = {
       {
         hashed: true,
         language: ["en", "zh"],
-      },
-    ],
-    [
-      "@docusaurus/plugin-sitemap",
-      {
-        changefreq: "daily",
-        priority: 1.0,
-        trailingSlash: false,
       },
     ],
   ],
